@@ -682,3 +682,104 @@ export const submitContactForm = (formData: Record<string, string>): Promise<{ s
   });
 };
 
+export interface ServiceFAQ {
+  id: string;
+  category: 'pricing' | 'duration' | 'warranty';
+  question: string;
+  answer: string;
+  highlight?: string;
+}
+
+export const serviceGeneralFaqs: ServiceFAQ[] = [
+  // PRICING & ESTIMATES
+  {
+    id: "pricing-calculation",
+    category: "pricing",
+    question: "How are service and repair costs calculated at Z.A Auto Workshop?",
+    answer: "We practice 100% upfront, transparent pricing. Every job begins with an itemized inspection detailing necessary parts, labor rates, and shop consumables. Work only commences once you have reviewed and approved the written quotation. You will never encounter hidden surcharges, surprise add-ons, or unexpected bills upon vehicle pickup.",
+    highlight: "Itemized written estimates before any work begins"
+  },
+  {
+    id: "pricing-inspection-fee",
+    category: "pricing",
+    question: "Do you charge for the initial vehicle inspection and diagnostic scan?",
+    answer: "We offer a complimentary initial multi-point physical check (evaluating suspension wear, brake pads, fluid levels, and drive belts). For advanced computer OBD-II scanner diagnostics or complex electrical fault tracing requiring dedicated test equipment, a nominal diagnostic fee applies—which is 100% credited toward your repair bill if you proceed with the work at our workshop.",
+    highlight: "Free physical checks; scanner diagnostic fee credited toward repair"
+  },
+  {
+    id: "pricing-customer-parts",
+    category: "pricing",
+    question: "Can I provide my own spare parts or engine oil?",
+    answer: "Yes, you are welcome to supply your own genuine parts or preferred engine oil brands, and we will charge purely for expert labor and installation. Please note, however, that while our labor carries our standard workmanship guarantee, parts warranties apply exclusively to components sourced and verified through our authorized supplier network.",
+    highlight: "Flexible: bring your own parts or choose our genuine supplier stock"
+  },
+  {
+    id: "pricing-payment-methods",
+    category: "pricing",
+    question: "What payment methods do you accept at the Sialkot facility?",
+    answer: "We provide convenient payment options for all customers, including cash, Raast instant QR transfer, online bank transfers (IBFT), JazzCash, EasyPaisa, and major debit/credit cards at our reception counter.",
+    highlight: "Cash, Raast, online banking, and card payments accepted"
+  },
+
+  // DURATION & TURNAROUND
+  {
+    id: "duration-mechanical",
+    category: "duration",
+    question: "How long do standard mechanical maintenance and minor repairs take?",
+    answer: "Routine maintenance—such as periodic oil and filter changes, brake pad replacements, spark plug renewals, and coolant flushes—is typically completed within 1.5 to 3 hours. By booking an appointment in advance, your service bay and parts will be reserved for immediate same-day turnaround.",
+    highlight: "Same-day turnaround (1.5 to 3 hours) for routine maintenance"
+  },
+  {
+    id: "duration-denting-painting",
+    category: "duration",
+    question: "What is the turnaround time for accident denting and baking oven painting?",
+    answer: "Minor paintless dent repair (PDR) or scratch polishing is often completed within 4 to 8 hours. Individual panel denting and oven spray painting requires 24 to 48 hours to ensure proper primer curing, exact computerized color blending, and pressurized baking cycles. Complete exterior resprays or heavy collision restorations typically require 4 to 7 working days.",
+    highlight: "24–48 hours for panel dent/paint; 4–8 hours for minor PDR"
+  },
+  {
+    id: "duration-waiting-lounge",
+    category: "duration",
+    question: "Can I wait at the workshop while my vehicle is being serviced?",
+    answer: "Yes! Customers are welcome to relax in our air-conditioned customer lounge featuring high-speed Wi-Fi, comfortable seating, complimentary tea/water, and glass viewing windows into the active service bays. If you prefer to drop off your vehicle, our service advisors provide ongoing WhatsApp photo and video updates.",
+    highlight: "Comfortable air-conditioned lounge with Wi-Fi & bay viewing"
+  },
+  {
+    id: "duration-emergency-service",
+    category: "duration",
+    question: "Do you offer emergency same-day repairs for vehicle breakdowns?",
+    answer: "Yes. For urgent failures—such as sudden starter motor or alternator breakdown, severe engine overheating, electrical cutouts, or brake failures—we maintain prioritized rapid-response bays for prompt troubleshooting and same-day turnaround whenever parts are in stock.",
+    highlight: "Priority rapid-response bays for urgent mechanical & electrical faults"
+  },
+
+  // WARRANTY & GUARANTEES
+  {
+    id: "warranty-mechanical-parts",
+    category: "warranty",
+    question: "What warranty do you provide on mechanical repairs and parts?",
+    answer: "All standard mechanical repairs and replacements carried out at Z.A Auto Workshop come with a 6-month or 10,000-kilometer workmanship warranty (whichever comes first). OEM and branded replacement parts carry the full manufacturer warranty. If an installed part or repair fails under normal operating conditions during this period, we rectify or replace it at zero labor charge.",
+    highlight: "6-month / 10,000 km workmanship warranty on mechanical repairs"
+  },
+  {
+    id: "warranty-paint-finish",
+    category: "warranty",
+    question: "What warranty coverage is included with your baking oven paint jobs?",
+    answer: "Because our paint booth maintains pressurized, dust-filtered airflow and regulated baking heat, all full panel and multi-panel paint jobs include a 1-year to 3-year warranty (depending on the premium clearcoat selected) against clearcoat peeling, color fading, cracking, or bubbling under normal driving conditions.",
+    highlight: "Up to 3-year warranty against clearcoat peeling, fading, or bubbling"
+  },
+  {
+    id: "warranty-reoccurring-fault",
+    category: "warranty",
+    question: "What happens if an electrical or computer diagnostic issue reoccurs?",
+    answer: "Modern vehicle computer networks can be intricate. If any diagnostic error code or warning lamp re-triggers after a repair, we invite you back for a complimentary diagnostic re-scan. Our master auto electrician will inspect the circuit and prioritize your vehicle to resolve the underlying root cause without additional diagnostic charges.",
+    highlight: "Complimentary re-scan and priority resolution if symptoms return"
+  },
+  {
+    id: "warranty-logbook-compliance",
+    category: "warranty",
+    question: "Will servicing my car at Z.A Auto Workshop void my factory manufacturer warranty?",
+    answer: "No. We perform scheduled logbook servicing strictly according to manufacturer specifications, using manufacturer-approved viscosity oils, genuine OEM filters, and certified torque specs. We stamp and sign your service book, keeping your vehicle's warranty status and maintenance history completely intact.",
+    highlight: "100% manufacturer-compliant logbook servicing preserves factory warranty"
+  }
+];
+
+
