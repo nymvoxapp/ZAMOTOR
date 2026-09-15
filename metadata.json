@@ -1,0 +1,6 @@
+{
+  "name": "Z.A Auto Workshop",
+  "description": "Z.A Auto Workshop - Mechanical Repairs, Auto Electrical & Denting Painting Specialists in Sialkot. Logbook servicing, brakes, engine, AC, advanced diagnostics, and collision body repair.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
